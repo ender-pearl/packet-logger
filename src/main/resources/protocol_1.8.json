@@ -1,0 +1,480 @@
+{
+  "version": 47,
+  "states": [
+    {
+      "id": 0,
+      "name": "PLAY",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "KeepAlive"
+        },
+        {
+          "id": 1,
+          "name": "Chat"
+        },
+        {
+          "id": 2,
+          "name": "UseEntity"
+        },
+        {
+          "id": 3,
+          "name": "Flying"
+        },
+        {
+          "id": 4,
+          "name": "Position"
+        },
+        {
+          "id": 5,
+          "name": "Look"
+        },
+        {
+          "id": 6,
+          "name": "PositionLook"
+        },
+        {
+          "id": 7,
+          "name": "BlockDig"
+        },
+        {
+          "id": 8,
+          "name": "BlockPlace"
+        },
+        {
+          "id": 9,
+          "name": "HeldItemSlot"
+        },
+        {
+          "id": 10,
+          "name": "ArmAnimation"
+        },
+        {
+          "id": 11,
+          "name": "EntityAction"
+        },
+        {
+          "id": 12,
+          "name": "SteerVehicle"
+        },
+        {
+          "id": 13,
+          "name": "CloseWindow"
+        },
+        {
+          "id": 14,
+          "name": "WindowClick"
+        },
+        {
+          "id": 15,
+          "name": "Transaction"
+        },
+        {
+          "id": 16,
+          "name": "SetCreativeSlot"
+        },
+        {
+          "id": 17,
+          "name": "EnchantItem"
+        },
+        {
+          "id": 18,
+          "name": "UpdateSign"
+        },
+        {
+          "id": 19,
+          "name": "Abilities"
+        },
+        {
+          "id": 20,
+          "name": "TabComplete"
+        },
+        {
+          "id": 21,
+          "name": "Settings"
+        },
+        {
+          "id": 22,
+          "name": "ClientCommand"
+        },
+        {
+          "id": 23,
+          "name": "CustomPayload"
+        },
+        {
+          "id": 24,
+          "name": "Spectate"
+        },
+        {
+          "id": 25,
+          "name": "ResourcePackStatus"
+        }
+      ],
+      "clientBound": [
+        {
+          "id": 0,
+          "name": "KeepAlive"
+        },
+        {
+          "id": 1,
+          "name": "Login"
+        },
+        {
+          "id": 2,
+          "name": "Chat"
+        },
+        {
+          "id": 3,
+          "name": "UpdateTime"
+        },
+        {
+          "id": 4,
+          "name": "EntityEquipment"
+        },
+        {
+          "id": 5,
+          "name": "SpawnPosition"
+        },
+        {
+          "id": 6,
+          "name": "UpdateHealth"
+        },
+        {
+          "id": 7,
+          "name": "Respawn"
+        },
+        {
+          "id": 8,
+          "name": "Position"
+        },
+        {
+          "id": 9,
+          "name": "HeldItemSlot"
+        },
+        {
+          "id": 10,
+          "name": "Bed"
+        },
+        {
+          "id": 11,
+          "name": "Animation"
+        },
+        {
+          "id": 12,
+          "name": "NamedEntitySpawn"
+        },
+        {
+          "id": 13,
+          "name": "Collect"
+        },
+        {
+          "id": 14,
+          "name": "SpawnEntity"
+        },
+        {
+          "id": 15,
+          "name": "SpawnEntityLiving"
+        },
+        {
+          "id": 16,
+          "name": "SpawnEntityPainting"
+        },
+        {
+          "id": 17,
+          "name": "SpawnEntityExperienceOrb"
+        },
+        {
+          "id": 18,
+          "name": "EntityVelocity"
+        },
+        {
+          "id": 19,
+          "name": "EntityDestroy"
+        },
+        {
+          "id": 20,
+          "name": "Entity"
+        },
+        {
+          "id": 21,
+          "name": "RelEntityMove"
+        },
+        {
+          "id": 22,
+          "name": "EntityLook"
+        },
+        {
+          "id": 23,
+          "name": "RelEntityMoveLook"
+        },
+        {
+          "id": 24,
+          "name": "EntityTeleport"
+        },
+        {
+          "id": 25,
+          "name": "EntityHeadRotation"
+        },
+        {
+          "id": 26,
+          "name": "EntityStatus"
+        },
+        {
+          "id": 27,
+          "name": "AttachEntity"
+        },
+        {
+          "id": 28,
+          "name": "EntityMetadata"
+        },
+        {
+          "id": 29,
+          "name": "EntityEffect"
+        },
+        {
+          "id": 30,
+          "name": "RemoveEntityEffect"
+        },
+        {
+          "id": 31,
+          "name": "Experience"
+        },
+        {
+          "id": 32,
+          "name": "UpdateAttributes"
+        },
+        {
+          "id": 33,
+          "name": "MapChunk"
+        },
+        {
+          "id": 34,
+          "name": "MultiBlockChange"
+        },
+        {
+          "id": 35,
+          "name": "BlockChange"
+        },
+        {
+          "id": 36,
+          "name": "BlockAction"
+        },
+        {
+          "id": 37,
+          "name": "BlockBreakAnimation"
+        },
+        {
+          "id": 38,
+          "name": "MapChunkBulk"
+        },
+        {
+          "id": 39,
+          "name": "Explosion"
+        },
+        {
+          "id": 40,
+          "name": "WorldEvent"
+        },
+        {
+          "id": 41,
+          "name": "NamedSoundEffect"
+        },
+        {
+          "id": 42,
+          "name": "WorldParticles"
+        },
+        {
+          "id": 43,
+          "name": "GameStateChange"
+        },
+        {
+          "id": 44,
+          "name": "SpawnEntityWeather"
+        },
+        {
+          "id": 45,
+          "name": "OpenWindow"
+        },
+        {
+          "id": 46,
+          "name": "CloseWindow"
+        },
+        {
+          "id": 47,
+          "name": "SetSlot"
+        },
+        {
+          "id": 48,
+          "name": "WindowItems"
+        },
+        {
+          "id": 49,
+          "name": "WindowData"
+        },
+        {
+          "id": 50,
+          "name": "Transaction"
+        },
+        {
+          "id": 51,
+          "name": "UpdateSign"
+        },
+        {
+          "id": 52,
+          "name": "Map"
+        },
+        {
+          "id": 53,
+          "name": "TileEntityData"
+        },
+        {
+          "id": 54,
+          "name": "OpenSignEditor"
+        },
+        {
+          "id": 55,
+          "name": "Statistic"
+        },
+        {
+          "id": 56,
+          "name": "PlayerInfo"
+        },
+        {
+          "id": 57,
+          "name": "Abilities"
+        },
+        {
+          "id": 58,
+          "name": "TabComplete"
+        },
+        {
+          "id": 59,
+          "name": "ScoreboardObjective"
+        },
+        {
+          "id": 60,
+          "name": "ScoreboardScore"
+        },
+        {
+          "id": 61,
+          "name": "ScoreboardDisplayObjective"
+        },
+        {
+          "id": 62,
+          "name": "ScoreboardTeam"
+        },
+        {
+          "id": 63,
+          "name": "CustomPayload"
+        },
+        {
+          "id": 64,
+          "name": "KickDisconnect"
+        },
+        {
+          "id": 65,
+          "name": "ServerDifficulty"
+        },
+        {
+          "id": 66,
+          "name": "CombatEvent"
+        },
+        {
+          "id": 67,
+          "name": "Camera"
+        },
+        {
+          "id": 68,
+          "name": "WorldBorder"
+        },
+        {
+          "id": 69,
+          "name": "Title"
+        },
+        {
+          "id": 70,
+          "name": "SetCompression"
+        },
+        {
+          "id": 71,
+          "name": "PlayerListHeaderFooter"
+        },
+        {
+          "id": 72,
+          "name": "ResourcePackSend"
+        },
+        {
+          "id": 73,
+          "name": "UpdateEntityNBT"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "STATUS",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "Start"
+        },
+        {
+          "id": 1,
+          "name": "Ping"
+        }
+      ],
+      "clientBound": [
+        {
+          "id": 0,
+          "name": "ServerInfo"
+        },
+        {
+          "id": 1,
+          "name": "Pong"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "LOGIN",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "Start"
+        },
+        {
+          "id": 1,
+          "name": "EncryptionBegin"
+        }
+      ],
+      "clientBound": [
+        {
+          "id": 0,
+          "name": "Disconnect"
+        },
+        {
+          "id": 1,
+          "name": "EncryptionBegin"
+        },
+        {
+          "id": 2,
+          "name": "Success"
+        },
+        {
+          "id": 3,
+          "name": "SetCompression"
+        }
+      ]
+    },
+    {
+      "id": -1,
+      "name": "HANDSHAKING",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "SetProtocol"
+        }
+      ],
+      "clientBound": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.minecraft.packetlogger.gui.GuiController">
+   <center>
+      <SplitPane dividerPositions="0.24191866527632952, 0.899895724713243" prefHeight="400.0" prefWidth="887.0" BorderPane.alignment="CENTER">
+        <items>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <ListView fx:id="filterList" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ListView>
+                  <HBox prefHeight="0.0" prefWidth="208.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="filterCheckAll" mnemonicParsing="false" text="Check All" />
+                        <Button fx:id="filterUncheckAll" mnemonicParsing="false" text="Uncheck All" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <TextField fx:id="filterSearch" promptText="Search...">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="packetTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                  <TableColumn fx:id="timeColumn" prefWidth="133.0" text="Time" />
+                  <TableColumn fx:id="addressColumn" prefWidth="82.0" text="Address" />
+                <TableColumn fx:id="directionColumn" minWidth="0.0" prefWidth="67.0" text="Direction" />
+                  <TableColumn fx:id="stateColumn" prefWidth="61.0" text="State" />
+                  <TableColumn fx:id="opcodeColumn" prefWidth="61.0" text="Opcode" />
+                <TableColumn fx:id="nameColumn" prefWidth="135.0" text="Name" />
+                  <TableColumn fx:id="contentColumn" prefWidth="75.0" text="Content" />
+              </columns>
+            </TableView>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

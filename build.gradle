@@ -1,0 +1,47 @@
+group 'net.minecraft'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+configurations {
+    lib
+    compile.extendsFrom(lib)
+
+    provided
+    compile.extendsFrom(provided)
+}
+
+sourceSets {
+    main { compileClasspath += configurations.provided }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile files("${System.properties['java.home']}/../lib/tools.jar")
+    compile 'io.netty:netty-all:4.0.23.Final'
+    compile 'com.google.code.gson:gson:2.3.1'
+
+    provided 'org.projectlombok:lombok:1.16.0'
+
+    lib 'org.ow2.asm:asm-debug-all:5.0.4'
+}
+
+jar {
+    from configurations.lib.collect { it.isDirectory() ? it : zipTree(it) }
+    manifest {
+        attributes(
+                "Manifest-Version": "1.0",
+                "Main-Class": "net.minecraft.packetlogger.main.Main",
+                "Premain-Class": "net.minecraft.packetlogger.agent.Agent",
+                "Agent-Class": "net.minecraft.packetlogger.agent.Agent",
+                "Can-Redefine-Classes": true,
+                "Can-Retransform-Classes": true,
+                "Can-Set-Native-Method-Prefix": true
+        )
+    }
+}
