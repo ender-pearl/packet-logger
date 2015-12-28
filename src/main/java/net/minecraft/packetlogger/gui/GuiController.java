@@ -44,7 +44,7 @@ public class GuiController {
                     .map(packetInfo -> new FilterEntry(stateInfo, packetInfo, PacketDirection.OUT))
                     .filter((entry) -> {
                         entry.checkedProperty().addListener((observable) -> {
-                            filteredPackets.setPredicate(this::filterPacket);
+                            refilterPackets();
                         });
                         return true;
                     })
@@ -54,7 +54,8 @@ public class GuiController {
                     .map(packetInfo -> new FilterEntry(stateInfo, packetInfo, PacketDirection.IN))
                     .filter((entry) -> {
                         entry.checkedProperty().addListener((observable) -> {
-                            filteredPackets.setPredicate(this::filterPacket);
+
+                            refilterPackets();
                         });
                         return true;
                     })
@@ -74,7 +75,8 @@ public class GuiController {
         opcodeColumn.setCellFactory(column -> new TableCell<PacketModel, Number>() {
             @Override
             protected void updateItem(Number item, boolean empty) {
-                if (item == null) {
+                if (item == null || empty) {
+                    setText("");
                     return;
                 }
 
@@ -100,7 +102,16 @@ public class GuiController {
         filterList.setCellFactory(CheckBoxListCell.forListView(FilterEntry::checkedProperty));
         filterList.setItems(filteredFilterEntries);
 
-        filteredPackets.setPredicate(this::filterPacket);
+        refilterPackets();
+    }
+
+    private void refilterPackets() {
+        GuiApplication.packetsLock.readLock().lock();
+        try {
+            filteredPackets.setPredicate(this::filterPacket);
+        } finally {
+            GuiApplication.packetsLock.readLock().unlock();
+        }
     }
 
     private boolean filterPacket(PacketModel packet) {

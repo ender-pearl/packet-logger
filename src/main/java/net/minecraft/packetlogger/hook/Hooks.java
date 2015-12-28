@@ -40,9 +40,18 @@ public class Hooks {
             ByteBuf buffer = (ByteBuf) bufferObject;
             ChannelHandlerContext ctx = (ChannelHandlerContext) ctxObject;
 
-            GuiApplication.packets.add(createPacketModel(ctx, OUT, packet, buffer));
+            pushPacket(createPacketModel(ctx, OUT, packet, buffer));
         } catch (Throwable ex) {
             ex.printStackTrace();
+        }
+    }
+
+    private static void pushPacket(PacketModel packetModel) {
+        GuiApplication.packetsLock.writeLock().lock();
+        try {
+            GuiApplication.packets.add(packetModel);
+        } finally {
+            GuiApplication.packetsLock.writeLock().unlock();
         }
     }
 
@@ -56,7 +65,7 @@ public class Hooks {
             ChannelHandlerContext ctx = (ChannelHandlerContext) ctxObject;
             Object packet = ((List) packets).get(0);
 
-            GuiApplication.packets.add(createPacketModel(ctx, IN, packet, buffer));
+            pushPacket(createPacketModel(ctx, IN, packet, buffer));
         } catch (Throwable ex) {
             ex.printStackTrace();
         }

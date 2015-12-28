@@ -14,7 +14,7 @@ public class FilterEntry {
     private final PacketInfo packetInfo;
     private final PacketDirection direction;
 
-    private final BooleanProperty checked = new SimpleBooleanProperty();
+    private final BooleanProperty checked = new SimpleBooleanProperty(true);
 
     @Override
     public String toString() {

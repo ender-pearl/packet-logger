@@ -8,8 +8,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import net.minecraft.packetlogger.packet.PacketModel;
 
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 public class GuiApplication extends Application {
     public static ObservableList<PacketModel> packets = FXCollections.synchronizedObservableList(FXCollections.observableArrayList());
+    public static ReadWriteLock packetsLock = new ReentrantReadWriteLock();
 
     public static void run(String[] args) {
         launch(args);
