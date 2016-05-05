@@ -1,11 +1,20 @@
 package net.minecraft.packetlogger.gui;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxListCell;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
+import lombok.Setter;
 import net.minecraft.packetlogger.hook.Hooks;
 import net.minecraft.packetlogger.info.ProtocolInfo;
 import net.minecraft.packetlogger.info.StateInfo;
@@ -24,12 +33,15 @@ public class GuiController {
     @FXML private TableColumn<PacketModel, String> stateColumn;
     @FXML private TableColumn<PacketModel, Number> opcodeColumn;
     @FXML private TableColumn<PacketModel, String> nameColumn;
-    @FXML private TableColumn<PacketModel, String> contentColumn;
+    @FXML private TableColumn<PacketModel, ByteBuf> contentColumn;
 
     @FXML private ListView<FilterEntry> filterList;
     @FXML private TextField filterSearch;
     @FXML private Button filterCheckAll;
     @FXML private Button filterUncheckAll;
+
+    @Setter
+    private Scene scene;
 
     private FilteredList<PacketModel> filteredPackets = new FilteredList<>(GuiApplication.packets);
 
@@ -84,6 +96,19 @@ public class GuiController {
             }
         });
         nameColumn.setCellValueFactory(data -> data.getValue().nameProperty());
+        contentColumn.setCellValueFactory(data -> data.getValue().contentProperty());
+        contentColumn.setCellFactory(column -> new TableCell<PacketModel, ByteBuf>() {
+            @Override
+            protected void updateItem(ByteBuf item, boolean empty) {
+                if (item == null || empty) {
+                    setText("");
+                    return;
+                }
+
+                setText(ByteBufUtil.hexDump(item));
+            }
+
+        });
 
         packetTable.setItems(filteredPackets);
 
@@ -124,5 +149,19 @@ public class GuiController {
             }
         }
         return false;
+    }
+
+    public void registerAccelerators() {
+        KeyCodeCombination keyCodeCombination = new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_ANY);
+        scene.getAccelerators().put(keyCodeCombination, () -> {
+            PacketModel packet = packetTable.getSelectionModel().getSelectedItem();
+            if (packet != null) {
+                ByteBuf content = packet.contentProperty().get();
+
+                ClipboardContent clipboardContent = new ClipboardContent();
+                clipboardContent.putString(ByteBufUtil.hexDump(content));
+                Clipboard.getSystemClipboard().setContent(clipboardContent);
+            }
+        });
     }
 }

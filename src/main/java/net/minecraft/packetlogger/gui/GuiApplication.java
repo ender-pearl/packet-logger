@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import net.minecraft.packetlogger.packet.PacketModel;
@@ -25,6 +26,10 @@ public class GuiApplication extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/scene.fxml"));
 
         Scene scene = new Scene(loader.load());
+
+        GuiController controller = loader.getController();
+        controller.setScene(scene);
+        controller.registerAccelerators();
 
         primaryStage.setTitle("Minecraft Packet Logger");
         primaryStage.setScene(scene);

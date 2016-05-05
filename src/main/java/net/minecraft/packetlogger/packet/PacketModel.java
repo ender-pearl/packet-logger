@@ -3,6 +3,7 @@ package net.minecraft.packetlogger.packet;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import javafx.beans.property.*;
+import javafx.beans.value.ObservableValue;
 import net.minecraft.packetlogger.info.PacketInfo;
 import net.minecraft.packetlogger.info.StateInfo;
 
@@ -16,9 +17,9 @@ public class PacketModel {
     private StringProperty state;
     private IntegerProperty opcode;
     private StringProperty name;
+    private ObjectProperty<ByteBuf> content;
 
     private final ChannelHandlerContext ctx;
-    private final ByteBuf content;
     private final Object packet;
 
     private final StateInfo stateInfo;
@@ -26,7 +27,6 @@ public class PacketModel {
 
     public PacketModel(LocalDateTime timestamp, ChannelHandlerContext ctx, PacketDirection direction, StateInfo state, int opcode, ByteBuf content, Object packet) {
         this.ctx = ctx;
-        this.content = content;
         this.packet = packet;
 
         this.stateInfo = state;
@@ -41,6 +41,7 @@ public class PacketModel {
         this.state = new SimpleStringProperty(stateInfo.getName());
         this.opcode = new SimpleIntegerProperty(opcode);
         this.name = new SimpleStringProperty(name);
+        this.content = new SimpleObjectProperty<>(content);
     }
 
     public ObjectProperty<LocalDateTime> timestampProperty() {
@@ -67,6 +68,10 @@ public class PacketModel {
         return name;
     }
 
+    public ObjectProperty<ByteBuf> contentProperty() {
+        return content;
+    }
+
     public StateInfo getStateInfo() {
         return stateInfo;
     }
@@ -78,4 +83,5 @@ public class PacketModel {
     public PacketDirection getDirection() {
         return direction.get();
     }
+
 }
