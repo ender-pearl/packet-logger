@@ -24,7 +24,7 @@ public class Agent {
         try {
             Gson gson = new Gson();
 
-            Hooks.protocolInfo = gson.fromJson(new InputStreamReader(Agent.class.getResourceAsStream("/protocol_1.8.json")), ProtocolInfo.class);
+            Hooks.protocolInfo = gson.fromJson(new InputStreamReader(Agent.class.getResourceAsStream("/protocol_1.9.json")), ProtocolInfo.class);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
