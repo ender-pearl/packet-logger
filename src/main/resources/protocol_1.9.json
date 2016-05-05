@@ -1,0 +1,508 @@
+{
+  "version": 109,
+  "states": [
+    {
+      "id": 0,
+      "name": "PLAY",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "PacketPlayInTeleportAccept"
+        },
+        {
+          "id": 1,
+          "name": "PacketPlayInTabComplete"
+        },
+        {
+          "id": 2,
+          "name": "PacketPlayInChat"
+        },
+        {
+          "id": 3,
+          "name": "PacketPlayInClientCommand"
+        },
+        {
+          "id": 4,
+          "name": "PacketPlayInSettings"
+        },
+        {
+          "id": 5,
+          "name": "PacketPlayInTransaction"
+        },
+        {
+          "id": 6,
+          "name": "PacketPlayInEnchantItem"
+        },
+        {
+          "id": 7,
+          "name": "PacketPlayInWindowClick"
+        },
+        {
+          "id": 8,
+          "name": "PacketPlayInCloseWindow"
+        },
+        {
+          "id": 9,
+          "name": "PacketPlayInCustomPayload"
+        },
+        {
+          "id": 10,
+          "name": "PacketPlayInUseEntity"
+        },
+        {
+          "id": 11,
+          "name": "PacketPlayInKeepAlive"
+        },
+        {
+          "id": 12,
+          "name": "PacketPlayInPosition"
+        },
+        {
+          "id": 13,
+          "name": "PacketPlayInPositionLook"
+        },
+        {
+          "id": 14,
+          "name": "PacketPlayInLook"
+        },
+        {
+          "id": 15,
+          "name": "PacketPlayInFlying"
+        },
+        {
+          "id": 16,
+          "name": "PacketPlayInVehicleMove"
+        },
+        {
+          "id": 17,
+          "name": "PacketPlayInBoatMove"
+        },
+        {
+          "id": 18,
+          "name": "PacketPlayInAbilities"
+        },
+        {
+          "id": 19,
+          "name": "PacketPlayInBlockDig"
+        },
+        {
+          "id": 20,
+          "name": "PacketPlayInEntityAction"
+        },
+        {
+          "id": 21,
+          "name": "PacketPlayInSteerVehicle"
+        },
+        {
+          "id": 22,
+          "name": "PacketPlayInResourcePackStatus"
+        },
+        {
+          "id": 23,
+          "name": "PacketPlayInHeldItemSlot"
+        },
+        {
+          "id": 24,
+          "name": "PacketPlayInSetCreativeSlot"
+        },
+        {
+          "id": 25,
+          "name": "PacketPlayInUpdateSign"
+        },
+        {
+          "id": 26,
+          "name": "PacketPlayInArmAnimation"
+        },
+        {
+          "id": 27,
+          "name": "PacketPlayInSpectate"
+        },
+        {
+          "id": 28,
+          "name": "PacketPlayInUseItem"
+        },
+        {
+          "id": 29,
+          "name": "PacketPlayInBlockPlace"
+        }
+      ],
+      "clientBound": [
+        {
+          "id": 0,
+          "name": "PacketPlayOutSpawnEntity"
+        },
+        {
+          "id": 1,
+          "name": "PacketPlayOutSpawnEntityExperienceOrb"
+        },
+        {
+          "id": 2,
+          "name": "PacketPlayOutSpawnEntityWeather"
+        },
+        {
+          "id": 3,
+          "name": "PacketPlayOutSpawnEntityLiving"
+        },
+        {
+          "id": 4,
+          "name": "PacketPlayOutSpawnEntityPainting"
+        },
+        {
+          "id": 5,
+          "name": "PacketPlayOutNamedEntitySpawn"
+        },
+        {
+          "id": 6,
+          "name": "PacketPlayOutAnimation"
+        },
+        {
+          "id": 7,
+          "name": "PacketPlayOutStatistic"
+        },
+        {
+          "id": 8,
+          "name": "PacketPlayOutBlockBreakAnimation"
+        },
+        {
+          "id": 9,
+          "name": "PacketPlayOutTileEntityData"
+        },
+        {
+          "id": 10,
+          "name": "PacketPlayOutBlockAction"
+        },
+        {
+          "id": 11,
+          "name": "PacketPlayOutBlockChange"
+        },
+        {
+          "id": 12,
+          "name": "PacketPlayOutBoss"
+        },
+        {
+          "id": 13,
+          "name": "PacketPlayOutServerDifficulty"
+        },
+        {
+          "id": 14,
+          "name": "PacketPlayOutTabComplete"
+        },
+        {
+          "id": 15,
+          "name": "PacketPlayOutChat"
+        },
+        {
+          "id": 16,
+          "name": "PacketPlayOutMultiBlockChange"
+        },
+        {
+          "id": 17,
+          "name": "PacketPlayOutTransaction"
+        },
+        {
+          "id": 18,
+          "name": "PacketPlayOutCloseWindow"
+        },
+        {
+          "id": 19,
+          "name": "PacketPlayOutOpenWindow"
+        },
+        {
+          "id": 20,
+          "name": "PacketPlayOutWindowItems"
+        },
+        {
+          "id": 21,
+          "name": "PacketPlayOutWindowData"
+        },
+        {
+          "id": 22,
+          "name": "PacketPlayOutSetSlot"
+        },
+        {
+          "id": 23,
+          "name": "PacketPlayOutSetCooldown"
+        },
+        {
+          "id": 24,
+          "name": "PacketPlayOutCustomPayload"
+        },
+        {
+          "id": 25,
+          "name": "PacketPlayOutCustomSoundEffect"
+        },
+        {
+          "id": 26,
+          "name": "PacketPlayOutKickDisconnect"
+        },
+        {
+          "id": 27,
+          "name": "PacketPlayOutEntityStatus"
+        },
+        {
+          "id": 28,
+          "name": "PacketPlayOutExplosion"
+        },
+        {
+          "id": 29,
+          "name": "PacketPlayOutUnloadChunk"
+        },
+        {
+          "id": 30,
+          "name": "PacketPlayOutGameStateChange"
+        },
+        {
+          "id": 31,
+          "name": "PacketPlayOutKeepAlive"
+        },
+        {
+          "id": 32,
+          "name": "PacketPlayOutMapChunk"
+        },
+        {
+          "id": 33,
+          "name": "PacketPlayOutWorldEvent"
+        },
+        {
+          "id": 34,
+          "name": "PacketPlayOutWorldParticles"
+        },
+        {
+          "id": 35,
+          "name": "PacketPlayOutLogin"
+        },
+        {
+          "id": 36,
+          "name": "PacketPlayOutMap"
+        },
+        {
+          "id": 37,
+          "name": "PacketPlayOutRelEntityMove"
+        },
+        {
+          "id": 38,
+          "name": "PacketPlayOutRelEntityMoveLook"
+        },
+        {
+          "id": 39,
+          "name": "PacketPlayOutEntityLook"
+        },
+        {
+          "id": 40,
+          "name": "PacketPlayOutEntity"
+        },
+        {
+          "id": 41,
+          "name": "PacketPlayOutVehicleMove"
+        },
+        {
+          "id": 42,
+          "name": "PacketPlayOutOpenSignEditor"
+        },
+        {
+          "id": 43,
+          "name": "PacketPlayOutAbilities"
+        },
+        {
+          "id": 44,
+          "name": "PacketPlayOutCombatEvent"
+        },
+        {
+          "id": 45,
+          "name": "PacketPlayOutPlayerInfo"
+        },
+        {
+          "id": 46,
+          "name": "PacketPlayOutPosition"
+        },
+        {
+          "id": 47,
+          "name": "PacketPlayOutBed"
+        },
+        {
+          "id": 48,
+          "name": "PacketPlayOutEntityDestroy"
+        },
+        {
+          "id": 49,
+          "name": "PacketPlayOutRemoveEntityEffect"
+        },
+        {
+          "id": 50,
+          "name": "PacketPlayOutResourcePackSend"
+        },
+        {
+          "id": 51,
+          "name": "PacketPlayOutRespawn"
+        },
+        {
+          "id": 52,
+          "name": "PacketPlayOutEntityHeadRotation"
+        },
+        {
+          "id": 53,
+          "name": "PacketPlayOutWorldBorder"
+        },
+        {
+          "id": 54,
+          "name": "PacketPlayOutCamera"
+        },
+        {
+          "id": 55,
+          "name": "PacketPlayOutHeldItemSlot"
+        },
+        {
+          "id": 56,
+          "name": "PacketPlayOutScoreboardDisplayObjective"
+        },
+        {
+          "id": 57,
+          "name": "PacketPlayOutEntityMetadata"
+        },
+        {
+          "id": 58,
+          "name": "PacketPlayOutAttachEntity"
+        },
+        {
+          "id": 59,
+          "name": "PacketPlayOutEntityVelocity"
+        },
+        {
+          "id": 60,
+          "name": "PacketPlayOutEntityEquipment"
+        },
+        {
+          "id": 61,
+          "name": "PacketPlayOutExperience"
+        },
+        {
+          "id": 62,
+          "name": "PacketPlayOutUpdateHealth"
+        },
+        {
+          "id": 63,
+          "name": "PacketPlayOutScoreboardObjective"
+        },
+        {
+          "id": 64,
+          "name": "PacketPlayOutMount"
+        },
+        {
+          "id": 65,
+          "name": "PacketPlayOutScoreboardTeam"
+        },
+        {
+          "id": 66,
+          "name": "PacketPlayOutScoreboardScore"
+        },
+        {
+          "id": 67,
+          "name": "PacketPlayOutSpawnPosition"
+        },
+        {
+          "id": 68,
+          "name": "PacketPlayOutUpdateTime"
+        },
+        {
+          "id": 69,
+          "name": "PacketPlayOutTitle"
+        },
+        {
+          "id": 70,
+          "name": "PacketPlayOutUpdateSign"
+        },
+        {
+          "id": 71,
+          "name": "PacketPlayOutNamedSoundEffect"
+        },
+        {
+          "id": 72,
+          "name": "PacketPlayOutPlayerListHeaderFooter"
+        },
+        {
+          "id": 73,
+          "name": "PacketPlayOutCollect"
+        },
+        {
+          "id": 74,
+          "name": "PacketPlayOutEntityTeleport"
+        },
+        {
+          "id": 75,
+          "name": "PacketPlayOutUpdateAttributes"
+        },
+        {
+          "id": 76,
+          "name": "PacketPlayOutEntityEffect"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "STATUS",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "PacketStatusInStart"
+        },
+        {
+          "id": 1,
+          "name": "PacketStatusInPing"
+        }
+      ],
+      "clientBound": [
+        {
+          "id": 0,
+          "name": "PacketStatusOutServerInfo"
+        },
+        {
+          "id": 1,
+          "name": "PacketStatusOutPong"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "LOGIN",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "PacketLoginInStart"
+        },
+        {
+          "id": 1,
+          "name": "PacketLoginInEncryptionBegin"
+        }
+      ],
+      "clientBound": [
+        {
+          "id": 0,
+          "name": "PacketLoginOutDisconnect"
+        },
+        {
+          "id": 1,
+          "name": "PacketLoginOutEncryptionBegin"
+        },
+        {
+          "id": 2,
+          "name": "PacketLoginOutSuccess"
+        },
+        {
+          "id": 3,
+          "name": "PacketLoginOutSetCompression"
+        }
+      ]
+    },
+    {
+      "id": -1,
+      "name": "HANDSHAKING",
+      "serverBound": [
+        {
+          "id": 0,
+          "name": "PacketHandshakingInSetProtocol"
+        }
+      ],
+      "clientBound": []
+    }
+  ]
+}
